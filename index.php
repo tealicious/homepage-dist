@@ -26,7 +26,7 @@ if($_POST["submit"]) {
 	<link rel="icon" href="blackEwok.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/index.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	<script src="js/modernizr-custom.js"></script>
 
 </head>
@@ -79,7 +79,7 @@ if($_POST["submit"]) {
 							<p>flip</p>
 						</div>
 						<div class="card-side" id="neilEwokBack">
-              <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/251050342&amp;amp;color=ff9894&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false" width="100%" height="166" scrolling="no" frameborder="no" class="song"></iframe>
+              <!-- <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/251050342&amp;amp;color=ff9894&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false" width="100%" height="166" scrolling="no" frameborder="no" class="song"></iframe> -->
 							<p>flip</p>
 						</div>
 					</div>
