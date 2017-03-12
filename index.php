@@ -26,7 +26,7 @@ if($_POST["submit"]) {
 	<link rel="icon" href="blackEwok.png">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/index.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
 	<script src="js/modernizr-custom.js"></script>
 
 </head>
@@ -172,43 +172,34 @@ December 2008</h3>
 						<div class="row">
 							<div class="col-md-12">
 								<h2 class=center>EXPERIENCE</h2>
+
 							</div>
-                <div class="col-md-4">
-                  <h3 class=right>WEB DEVELOPER<br>
-                    Hyperdrive Interactive – <a href="//hyperdrivewebsitestaging.azurewebsites.net/">HyperdriveI.com</a>
-                  </h3>
-                  <h3 class=right>Oct - 2016 – Current</h3>
-                  <h3 class=right>Loveland, OH  </h3>
-                </div>
-                <div class="col-md-7">
-                  <ul>
-                    <li><strong>Front end web developer:</strong></li>
-                    <li><a href="//bgchoustonstage.azurewebsites.net/" target="_blank">Boys and Girls Club of Houston</a>: Lead front-end developer
-                    </li>
-                    <li><a href="//cggstage.azurewebsites.net/" target="_blank">Cincinnati Golden Gloves</a>: Programmed custom hero video plugin and re-built site with new Bootstrap 4 library</li>
-                    <li><a href="//hyperdrivewebsitestaging.azurewebsites.net/" target="_blank">HyperDrive Overhaul</a>: Lead front-end dev on Hyperdrive's new homepage</li>
-                  </ul>
-                </div>
+
+							<div class="col-md-4">
+								<h3 class=right>WEB DEVELOPER<br>
+Self – <a href="https://tealiciousdesign.com/">TealiciousDesign.com</a>
+</h3>
+
+								<h3 class=right>Nov - 2015 – Current</h3>
+
+								<h3 class=right>Mason, OH  </h3>
+
+							</div>
+							<div class="col-md-7">
+								<ul>
+									<li><strong>Design, develop, and implement all html/css/jQuery, and host following projects:</strong></li>
+									<li><a href="http://www.carterknives.co/" target="_blank">Carter Knives Company</a>: Develop ecommerce platform that allows client to update inventory via mobile device or PC in WordPress
+									</li>
+									<li><a href="http://tealiciousdesign.com/Plaid%20Room%20Records/www/index.html" target="_blank">Plaid Room Records</a>: Integrate established branding into original web layout</li>
+									<li><a href="http://tealiciousdesign.com/bake/index.html" target="_blank">BAKE!</a>: Create branding identity and develop a two-tiered e-commerce catering menu</li>
+									<li><a href="http://tealiciousdesign.com/R&W%20Backups/startbootstrap-creative-1.0.2/index.html" target="_blank">R & W Auto</a>: Develop solution to update existing site by coordinating with 3rd party responsible for hosting inaccessible and embedded
+										iframe content</li>
+									<li><a href="http://tealiciousdesign.com/Skateboard/team.html" target="_blank">Cream Skateboards</a>: Conceptualize and implement online branding identity</li>
+
+
+								</ul>
+							</div>
 						</div>
-            <div class=row>
-              <div class="col-md-4">
-                <h3 class=right>WEB DEVELOPER<br>
-                  Self – <a href="https://tealiciousdesign.com/">TealiciousDesign.com</a>
-                </h3>
-                <h3 class=right>Nov - 2015 – Current</h3>
-                <h3 class=right>Mason, OH  </h3>
-              </div>
-              <div class="col-md-7">
-                <ul>
-                  <li><strong>Design, develop, and implement all html/css/jQuery, and host following projects:</strong></li>
-                  <li><a href="http://www.carterknives.co/" target="_blank">Carter Knives Company</a>: Develop ecommerce platform that allows client to update inventory via mobile device or PC in WordPress
-                  </li>
-                  <li><a href="http://tealiciousdesign.com/Plaid%20Room%20Records/www/index.html" target="_blank">Plaid Room Records</a>: Integrate established branding into original web layout</li>
-                  <li><a href="http://tealiciousdesign.com/bake/index.html" target="_blank">BAKE!</a>: Create branding identity and develop a two-tiered e-commerce catering menu</li>
-                  <li><a href="http://tealiciousdesign.com/Skateboard/team.html" target="_blank">Cream Skateboards</a>: Conceptualize and implement online branding identity</li>
-                </ul>
-              </div>
-            </div>
 						<div class=row>
 							<div class="col-md-4">
 								<h3 class=right>WEB CONTENT ADMINISTRATOR<br>
@@ -305,49 +296,19 @@ Erosion Runner</h3>
 
 
 			<div class="container-fluid" id="design">
-        <div class=row>
-    			<!-- <div class="col-xs-12">
-  					<div class="title">
-  						<h3 class='workDesignation'>Hyperdrive Interactive</h1>
-  					</div>
-  				</div> -->
-          <div class="col-md-4 col-sm-12">
-            <div class="thumbnail effect-goliath">
-              <img class="cole" src="images/BGC.jpg">
-              <div class="caption">
-                <h2>Boys & Girls Clubs of Greater Houston</h2>
-                <p>HyperDriveI.com: Pro-bono work for the BGC of greater Houtson</p>
-                <a class="work-link" href="//bgchoustonstage.azurewebsites.net/" target="_blank">visit</a>
-              </div>
-            </div>
-          </div>
+
+
+				<div class=row>
 
 					<div class="col-md-8 col-sm-12">
 						<div class="thumbnail effect-goliath">
-							<img class="cole excite" src="images/excitebike.png">
+							<img class="sideB lesserImg" src="images/bake.jpg">
 							<div class="caption">
-								<h2>Wild Men Die</h2>
-								<p><strong>In Development:</strong><br />A motorcycle helmet PSA project</p>
-								<a class="work-link" target="_blank" href="//wildmendie.com">visit</a>
+								<h2>BAKE!</h2>
+								<p>Designer caf&#233 and bakery for an emerging niche market</p>
+								<a href="http://tealiciousdesign.com/bake/index.html" class="work-link" target="_blank">visit</a>
 							</div>
 						</div>
-					</div>
-
-
-          <!-- <div class="col-xs-12">
-            <div class="title">
-              <h3 class='workDesignation'>Tealicious Design</h1>
-            </div>
-          </div> -->
-					<div class="col-md-8 col-sm-12">
-            <div class="thumbnail effect-goliath">
-              <img class="sideB lesserImg" src="images/glove.jpg">
-              <div class="caption">
-                <h2>Cincinnati Golden Gloves</h2>
-                <p>HyperDriveI.com: Redesign and custom hero video plugin creation for the Cincinnati Golden Gloves Program</p>
-                <a href="//cggstage.azurewebsites.net/" class="work-link" target="_blank">visit</a>
-              </div>
-            </div>
 					</div>
 
 
@@ -357,6 +318,7 @@ Erosion Runner</h3>
 							<img class="cole" src="images/creamboards.jpg">
 							<div class="caption">
 								<h2>Creamboards</h2>
+
 								<p>Branding concept for a skateboard company</p>
 								<a class="work-link" href="http://tealiciousdesign.com/Skateboard/team.html" target="_blank">visit</a>
 							</div>
@@ -369,7 +331,7 @@ Erosion Runner</h3>
 							<div class="caption">
 								<h2>plaidroom records</h2>
 								<p>Responsive redesign for a real record store</p>
-								<a class="work-link" href="Plaid Room Records/www/index.html" target="_blank">visit</a>
+								<a class="work-link" href="http://tealiciousdesign.com/Plaid%20Room%20Records/www/index.html" target="_blank">visit</a>
 							</div>
 						</div>
 					</div>
@@ -398,12 +360,12 @@ Erosion Runner</h3>
 					</div>
 
 					<div class="col-md-8 col-md-pull-4 col-sm-12">
-            <div class="thumbnail effect-goliath">
-							<img class="sideB lesserImg" src="images/bake.jpg">
+						<div class="thumbnail effect-goliath">
+							<img class="cole excite" src="images/excitebike.png">
 							<div class="caption">
-								<h2>BAKE!</h2>
-								<p>Designer caf&#233 and bakery for an emerging niche market</p>
-								<a href="bake/index.html" class="work-link" target="_blank">visit</a>
+								<h2>In Development</h2>
+								<p><strong>Coming Soon:</strong><br />A motorcycle helmet PSA project made in collaboration with <a href="http://samuelgates.com/" target="_blank">Sam Gates</a></p>
+								<a class="work-link" target="_blank" href="http://tealiciousdesign.com/scrub">visit</a>
 							</div>
 						</div>
 					</div>
