@@ -79,6 +79,7 @@ if($_POST["submit"]) {
 							<p>flip</p>
 						</div>
 						<div class="card-side" id="neilEwokBack">
+              <iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/251050342&amp;amp;color=ff9894&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false" width="100%" height="166" scrolling="no" frameborder="no" class="song"></iframe>
 							<p>flip</p>
 						</div>
 					</div>
@@ -175,10 +176,10 @@ December 2008</h3>
 							</div>
                 <div class="col-md-4">
                   <h3 class=right>WEB DEVELOPER<br>
-                    Hyperdrive Interactive – <a href="//hyperdrivewebsitestaging.azurewebsites.net/">HyperdriveI.com</a>
+                    Hyperdrive Interactive – <a target='_blank' href="http://hyperdrivei.com/">HyperdriveI.com</a>
                   </h3>
                   <h3 class=right>Oct - 2016 – Current</h3>
-                  <h3 class=right>Loveland, OH  </h3>
+                  <h3 class=right>Loveland, OH</h3>
                 </div>
                 <div class="col-md-7">
                   <ul>
