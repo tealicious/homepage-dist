@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="video-loop-app" oncontextmenu="return false;">
+        <video id="video_player" autoplay loop>
+        <source src="http://d12dfyjdyr4tom.cloudfront.net/taylorbw.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video>
+        <video id="mobile_video_player" preload="auto" loop>
+        <source src="http://d12dfyjdyr4tom.cloudfront.net/taylorbw.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video>
+        <i class="fa fa-play" aria-hidden="true " v-if="card.type=='video'"></i>
+        <div class="overlay" v-if="card.type=='video'"></div>
+    </div>
+</body>
+<script>
+    (function () {
+        // source: "https://s3-us-west-2.amazonaws.com/creemboard.vid/taylorbw.mp4",
+        //var source = "./taylorbw.mp4";
+        var wrapper = document.getElementById('video-loop-app');
+        var now = new Date();
+        var nowSeconds = now.getUTCSeconds(); // utc is a more universal time stamp, not dependant on tiem zone
+        var nowMins = now.getUTCMinutes();
+        var nowHours = now.getUTCHours();
+        var hoursToSeconds = nowHours * 3600;
+        var minutesToSeconds = nowMins * 60;
+        var nowTotalSeconds = nowSeconds + hoursToSeconds + minutesToSeconds;
+        var myVideoPlayer = document.getElementById('video_player');
+        var myMobileVideoPlayer = document.getElementById('mobile_video_player');
+        myVideoPlayer.addEventListener('loadedmetadata', function () {
+            var duration = myVideoPlayer.duration;
+            var videoCurrentStartTime = ((nowTotalSeconds / duration) % 1) * duration;
+            myVideoPlayer.currentTime = videoCurrentStartTime;
+        });
+        myMobileVideoPlayer.addEventListener('loadedmetadata', function () {
+            var duration = myMobileVideoPlayer.duration;
+            var videoCurrentStartTime = ((nowTotalSeconds / duration) % 1) * duration;
+            myMobileVideoPlayer.currentTime = videoCurrentStartTime;
+        });
+        Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+            get: function () {
+                return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+            }
+        })
+        wrapper.addEventListener('click', function () {
+            if (myMobileVideoPlayer.playing) {
+                this.classList.remove('playing');
+                myMobileVideoPlayer.pause();
+            } else {
+                this.classList.add('playing');
+                myMobileVideoPlayer.play();
+            }
+        });
+        myMobileVideoPlayer.addEventListener('play', function () {
+            //reset all times on play event to further simulate stream
+            now = new Date();
+            nowSeconds = now.getUTCSeconds();
+            nowMins = now.getUTCMinutes();
+            nowHours = now.getUTCHours();
+            hoursToSeconds = nowHours * 3600;
+            minutesToSeconds = nowMins * 60;
+            nowTotalSeconds = nowSeconds + hoursToSeconds + minutesToSeconds;
+            myVideoPlayer = document.getElementById('video_player');
+            myMobileVideoPlayer = document.getElementById('mobile_video_player');
+            var duration = myMobileVideoPlayer.duration;
+            var videoCurrentStartTime = ((nowTotalSeconds / duration) % 1) * duration;
+            myMobileVideoPlayer.currentTime = videoCurrentStartTime;
+        });
+    })();
+</script>
+<style>
+    #video-loop-app {
+        position: relative;
+        width: 80%;
+        margin: auto;
+    }
+
+    video {
+        position: relative;
+        width: 100%;
+    }
+
+    #video_player {
+        display: none;
+    }
+
+
+
+    .overlay {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.33);
+        top: 0;
+        transition: all .5s ease-in-out;
+    }
+
+    .fa-play,
+    .fa-play-circle,
+    .fa-play-circle-o {
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 5rem;
+        transition: all .5s ease-in-out;
+    }
+
+    .playing .fa,
+    .playing .overlay {
+        opacity: 0;
+    }
+
+    @media (min-width:1025px) {
+        #mobile_video_player {
+            display: none;
+        }
+        #video_player {
+            display: initial;
+        }
+        .fa,
+        .overlay {
+            display: none;
+        }
+    }
+</style>
+
+</html>
