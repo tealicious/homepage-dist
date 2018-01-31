@@ -24,61 +24,6 @@
         <div class="overlay" v-if="card.type=='video'"></div>
     </div>
 </body>
-<script>
-    (function () {
-        // source: "https://s3-us-west-2.amazonaws.com/creemboard.vid/taylorbw.mp4",
-        //var source = "./taylorbw.mp4";
-        var wrapper = document.getElementById('video-loop-app');
-        var now = new Date();
-        var nowSeconds = now.getUTCSeconds(); // utc is a more universal time stamp, not dependant on tiem zone
-        var nowMins = now.getUTCMinutes();
-        var nowHours = now.getUTCHours();
-        var hoursToSeconds = nowHours * 3600;
-        var minutesToSeconds = nowMins * 60;
-        var nowTotalSeconds = nowSeconds + hoursToSeconds + minutesToSeconds;
-        var myVideoPlayer = document.getElementById('video_player');
-        var myMobileVideoPlayer = document.getElementById('mobile_video_player');
-        myVideoPlayer.addEventListener('loadedmetadata', function () {
-            var duration = myVideoPlayer.duration;
-            var videoCurrentStartTime = ((nowTotalSeconds / duration) % 1) * duration;
-            myVideoPlayer.currentTime = videoCurrentStartTime;
-        });
-        myMobileVideoPlayer.addEventListener('loadedmetadata', function () {
-            var duration = myMobileVideoPlayer.duration;
-            var videoCurrentStartTime = ((nowTotalSeconds / duration) % 1) * duration;
-            myMobileVideoPlayer.currentTime = videoCurrentStartTime;
-        });
-        Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
-            get: function () {
-                return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
-            }
-        })
-        wrapper.addEventListener('click', function () {
-            if (myMobileVideoPlayer.playing) {
-                this.classList.remove('playing');
-                myMobileVideoPlayer.pause();
-            } else {
-                this.classList.add('playing');
-                myMobileVideoPlayer.play();
-            }
-        });
-        myMobileVideoPlayer.addEventListener('play', function () {
-            //reset all times on play event to further simulate stream
-            now = new Date();
-            nowSeconds = now.getUTCSeconds();
-            nowMins = now.getUTCMinutes();
-            nowHours = now.getUTCHours();
-            hoursToSeconds = nowHours * 3600;
-            minutesToSeconds = nowMins * 60;
-            nowTotalSeconds = nowSeconds + hoursToSeconds + minutesToSeconds;
-            myVideoPlayer = document.getElementById('video_player');
-            myMobileVideoPlayer = document.getElementById('mobile_video_player');
-            var duration = myMobileVideoPlayer.duration;
-            var videoCurrentStartTime = ((nowTotalSeconds / duration) % 1) * duration;
-            myMobileVideoPlayer.currentTime = videoCurrentStartTime;
-        });
-    })();
-</script>
 <style>
     #video-loop-app {
         position: relative;
