@@ -20,8 +20,8 @@
         <source src="http://d12dfyjdyr4tom.cloudfront.net/taylorbw.mp4" type="video/mp4" />
         Your browser does not support the video tag.
         </video>
-        <i class="fa fa-play" aria-hidden="true " v-if="card.type=='video'"></i>
-        <div class="overlay" v-if="card.type=='video'"></div>
+        <i class="fa fa-play" aria-hidden="true"></i>
+        <div class="overlay"></div>
     </div>
 </body>
 <script>
@@ -78,10 +78,22 @@
     })();
 </script>
 <style>
+    @keyframes fadein {
+        from {
+            opacity: 0;
+            transform: scale(1.1);
+        }
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
     #video-loop-app {
         position: relative;
         width: 80%;
         margin: auto;
+        animation: fadein 1s;
     }
 
     video {
@@ -92,8 +104,6 @@
     #video_player {
         display: none;
     }
-
-
 
     .overlay {
         height: 100%;
