@@ -26,9 +26,6 @@
 </body>
 <script>
     (function () {
-
-        // source: "https://s3-us-west-2.amazonaws.com/creemboard.vid/taylorbw.mp4",
-        //var source = "./taylorbw.mp4";
         var wrapper = document.getElementById('video-loop-app');
         var now = new Date();
         var nowSeconds = now.getUTCSeconds(); // utc is a more universal time stamp, not dependant on tiem zone
@@ -42,14 +39,12 @@
         myVideoPlayer.addEventListener('loadedmetadata', function () {
             var duration = myVideoPlayer.duration;
             var videoCurrentStartTime = ((nowTotalSeconds / duration) % 1) * duration;
-            //myVideoPlayer.currentTime = videoCurrentStartTime;
-            myVideoPlayer.currentTime = myVideoPlayer.duration - 10;
+            myVideoPlayer.currentTime = videoCurrentStartTime;
         });
         myMobileVideoPlayer.addEventListener('loadedmetadata', function () {
             var duration = myMobileVideoPlayer.duration;
             var videoCurrentStartTime = ((nowTotalSeconds / duration) % 1) * duration;
-            //myMobileVideoPlayer.currentTime = videoCurrentStartTime;
-            myMobileVideoPlayer.currentTime = myVideoPlayer.duration - 10;
+            myMobileVideoPlayer.currentTime = videoCurrentStartTime;
         });
         Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
             get: function () {
@@ -78,8 +73,7 @@
             myMobileVideoPlayer = document.getElementById('mobile_video_player');
             var duration = myMobileVideoPlayer.duration;
             var videoCurrentStartTime = ((nowTotalSeconds / duration) % 1) * duration;
-            //myMobileVideoPlayer.currentTime = videoCurrentStartTime;
-            myMobileVideoPlayer.currentTime = myVideoPlayer.duration - 10;
+            myMobileVideoPlayer.currentTime = videoCurrentStartTime;
         });
     })();
 </script>
