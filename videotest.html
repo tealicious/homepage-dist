@@ -8,6 +8,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous">
+
+    <style>
+        @keyframes fadein {
+            from {
+                opacity: 0;
+                transform: scale(1.1);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        #video-loop-app {
+            position: relative;
+            width: 80%;
+            margin: auto;
+            animation: fadein 1s;
+        }
+
+        video {
+            position: relative;
+            width: 100%;
+        }
+
+        #video_player {
+            display: none;
+        }
+
+        .overlay {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.33);
+            top: 0;
+            transition: all .5s ease-in-out;
+        }
+
+        .fa-play,
+        .fa-play-circle,
+        .fa-play-circle-o {
+            z-index: 1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 5rem;
+            transition: all .5s ease-in-out;
+        }
+
+        .playing .fa,
+        .playing .overlay {
+            opacity: 0;
+        }
+
+        @media (min-width:1025px) {
+            #mobile_video_player {
+                display: none;
+            }
+            #video_player {
+                display: initial;
+            }
+            .fa,
+            .overlay {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -77,73 +146,5 @@
         });
     })();
 </script>
-<style>
-    @keyframes fadein {
-        from {
-            opacity: 0;
-            transform: scale(1.1);
-        }
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-
-    #video-loop-app {
-        position: relative;
-        width: 80%;
-        margin: auto;
-        animation: fadein 1s;
-    }
-
-    video {
-        position: relative;
-        width: 100%;
-    }
-
-    #video_player {
-        display: none;
-    }
-
-    .overlay {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        background: rgba(0, 0, 0, 0.33);
-        top: 0;
-        transition: all .5s ease-in-out;
-    }
-
-    .fa-play,
-    .fa-play-circle,
-    .fa-play-circle-o {
-        z-index: 1;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: rgba(255, 255, 255, 0.85);
-        font-size: 5rem;
-        transition: all .5s ease-in-out;
-    }
-
-    .playing .fa,
-    .playing .overlay {
-        opacity: 0;
-    }
-
-    @media (min-width:1025px) {
-        #mobile_video_player {
-            display: none;
-        }
-        #video_player {
-            display: initial;
-        }
-        .fa,
-        .overlay {
-            display: none;
-        }
-    }
-</style>
 
 </html>
